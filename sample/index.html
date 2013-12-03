@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carousel Widget Plugin</title>
+        <script src="http://cdn.ariatemplates.com/atlatest.js"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #fafafa;
+                font: 14px "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+            }
+            .slides {
+                margin: 20px auto;
+                border: 3px solid #fff;
+                border-radius: 6px;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+            }
+            nav {
+                text-align: center;
+            }
+            a {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                color: #aaa;
+                display: inline-block;
+                height: 18px;
+                text-decoration: none;
+                width: 20px;
+            }
+            a.current {
+                background: #ccc;
+                color: #fff;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output"></div>
+
+        <script>
+          aria.core.AppEnvironment.setEnvironment({
+            defaultWidgetLibs : {
+              "widget": "atplugins.carousel.CarouselLib"
+            }
+          });
+
+          Aria.loadTemplate({
+            classpath: "SampleTemplate",
+            div: "output"
+          });
+        </script>
+
+    </body>
+</html>

@@ -1,4 +1,1 @@
-carousel
-========
-
-A customizable carousel widget.
+# Carousel widget plugin for Aria Templates #
