@@ -42,10 +42,9 @@ Aria.classDefinition({
         this._ul = null;
 
         // slideshow timer used by setInterval
-        this.__timer=null;
+        this.__timer = null;
 
         // images and captions arrays based on the original multitypes array
-        // TODO rewrite map with forEach
         this._images = cfg.images.map(function(e){return (typeof e == "object" ? e.src : e);}, this);
         this._captions = cfg.images.map(function(e){return (typeof e == "object" ? e.title : "");}, this);
 
@@ -98,7 +97,6 @@ Aria.classDefinition({
 
         writeMarkup : function (out) {
             // for a given image array [a,b,c] we create the c,a,b,c,a list of <li> (to handle continuous loops)
-            // TODO rewrite map with forEach
             var c = this._cfg;
             var img = this._images;
             var caption = this._captions[this._idx - 1];

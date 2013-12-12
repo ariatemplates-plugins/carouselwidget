@@ -2,7 +2,17 @@
 <html>
     <head>
         <title>Carousel Widget Plugin</title>
-        <script src="http://cdn.ariatemplates.com/atlatest.js"></script>
+
+        <script>
+            var devMode = document.location.href.indexOf("devMode=true") != -1;
+            if(devMode) {
+                document.write('<scr' + 'ipt src="http://cdn.ariatemplates.com/atlatest.js?dev"></scr' + 'ipt>');
+            } else {
+                document.write('<scr' + 'ipt src="http://cdn.ariatemplates.com/atlatest.js"></scr' + 'ipt>');
+                document.write('<scr' + 'ipt src="atplugins.carousel.js"></scr' + 'ipt>');
+            }
+        </script>
+
         <style>
             body {
                 margin: 0;
@@ -40,6 +50,9 @@
 
         <script>
           aria.core.AppEnvironment.setEnvironment({
+            appSettings:{
+              devMode: true
+            },
             defaultWidgetLibs : {
               "widget": "atplugins.carousel.CarouselLib"
             }
