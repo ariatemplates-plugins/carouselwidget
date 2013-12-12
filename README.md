@@ -1,7 +1,6 @@
 # Carousel widget plugin for Aria Templates #
 
-This **plugin** is a sample which shows how to write plugins for [Aria Templates](http://ariatemplates.com/ "Aria Templates").
-Following this structure is highly recommended in order to ease plugins adoption.
+A simple AT carousel widget (as used on http://ariatemplates.com)
 
 ## Documentation ##
 
