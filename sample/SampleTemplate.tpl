@@ -51,7 +51,7 @@
 
     {macro bullets()}
 		{foreach img in data.images}
-			<a ${img_index == data.curimg ? 'class="current"' : ''}
+			<a ${img_index == data.curimg ? 'class="current"' : ''|escapeForHTML:false}
 				href="#"
 				{on click new Function('aria.utils.Json.setValue(this.data, "curimg", ' + img_index + ');') /}>
 				${img_index * 1 + 1}
